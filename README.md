@@ -1,15 +1,50 @@
-# dijkstra
+# Dijkstra
 
-To install dependencies:
+**Dijkstra's Algorithm** is a shortest path search algorithm in a weighted graph. It is used to find the shortest path from a starting node to all other nodes in a network, considering the costs (or weights) of the edges.
 
-```bash
-bun install
+## Example
+
+```ts
+import { BoardManager, type Board } from './src'
+
+const board: Board =
+[
+  ['🟩', '⬜', '⬜', '⬜', '⬜'],
+  ['⬜', '⬛', '⬛', '⬜', '⬛'],
+  ['⬜', '⬛', '🟥', '⬜', '⬜'],
+  ['⬜', '⬛', '⬜', '⬛', '⬜'],
+  ['⬜', '⬜', '⬜', '⬛', '⬛'],
+]
+
+const manager = new BoardManager(board)
+
+console.log('Initial board:')
+manager.display()
+console.log('\n')
+
+manager.solve()
+console.log('Solved board:')
+manager.display()
 ```
 
-To run:
+```sh
+Initial board:
+🟩⬜⬜⬜⬜
+⬜⬛⬛⬜⬛
+⬜⬛🟥⬜⬜
+⬜⬛⬜⬛⬜
+⬜⬜⬜⬛⬛
 
-```bash
-bun run app.ts
+Solved board:
+🟩🟦🟦🟦⬜
+⬜⬛⬛🟦⬛
+⬜⬛🟥🟦⬜
+⬜⬛⬜⬛⬜
+⬜⬜⬜⬛⬛
 ```
 
-This project was created using `bun init` in bun v1.1.42. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Built with
+
+[![TypeScript](https://skillicons.dev/icons?i=ts)](https://www.typescriptlang.org/)
+[![Bun](https://skillicons.dev/icons?i=bun)](https://bun.sh/)
+[![Jest](https://skillicons.dev/icons?i=jest)](https://jestjs.io/)
