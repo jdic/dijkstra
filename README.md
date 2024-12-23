@@ -48,3 +48,5 @@ Solved board:
 [![TypeScript](https://skillicons.dev/icons?i=ts)](https://www.typescriptlang.org/)
 [![Bun](https://skillicons.dev/icons?i=bun)](https://bun.sh/)
 [![Jest](https://skillicons.dev/icons?i=jest)](https://jestjs.io/)
+
+> Note: I also used **[Husky](https://typicode.github.io/husky/)** and **[ESLint](https://eslint.org/)**, but **[Skill Icons](https://skillicons.dev/)** does not have these icons available yet.
