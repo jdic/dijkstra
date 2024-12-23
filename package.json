@@ -9,7 +9,13 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "prepare": "husky",
-    "test": "jest"
+    "test": "jest",
+    "build:browser": "bun build ./src/index.ts --outdir ./dist --target browser --sourcemap",
+    "build:bun": "bun build ./src/index.ts --outdir ./dist --target bun --sourcemap",
+    "build:node": "bun build ./src/index.ts --outdir ./dist --target node --sourcemap",
+    "compile:app": "bun build ./app.ts --compile --outfile ./dist/app",
+    "compile:app:minify": "bun build ./app.ts --compile --minify --outfile ./dist/app",
+    "clear": "rm -rf ./dist"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
