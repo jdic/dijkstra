@@ -28,8 +28,7 @@ export default
     },
   },
   {
-    files: ['**/*.d.ts'],
-    ignores: ['**/*.js'],
+    ignores: ['**/*.js', '**/*.d.ts'],
     rules:
     {
       'no-unused-vars': 'off',
@@ -38,7 +37,7 @@ export default
   },
   {
     files: ['**/*.{ts}'],
-    ignores: ['**/*.js'],
+    ignores: ['**/*.js', '**/*.d.ts'],
   },
   {
     languageOptions:
@@ -49,7 +48,7 @@ export default
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    ignores: ['**/*.js'],
+    ignores: ['**/*.js', '**/*.d.ts'],
     rules:
     {
       'arrow-spacing': ['warn', { 'before': true, 'after': true }],

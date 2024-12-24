@@ -1,27 +1,15 @@
 {
   "name": "@jdic/dijkstra",
-  "module": "app.ts",
-  "version": "22.12.2024",
-  "type": "module",
-  "scripts": {
-    "start": "bun app.ts",
-    "start:dev": "bun --hot app.ts",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
-    "prepare": "husky",
-    "test": "jest",
-    "build:browser": "bun build ./src/index.ts --outdir ./dist --target browser --sourcemap",
-    "build:bun": "bun build ./src/index.ts --outdir ./dist --target bun --sourcemap",
-    "build:node": "bun build ./src/index.ts --outdir ./dist --target node --sourcemap",
-    "compile:app": "bun build ./app.ts --compile --outfile ./dist/app",
-    "compile:app:minify": "bun build ./app.ts --compile --minify --outfile ./dist/app",
-    "clear": "rm -rf ./dist"
-  },
+  "version": "22.12.2024-t1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@jest/globals": "^29.7.0",
     "@types/bun": "latest",
     "@types/jest": "^29.5.14",
+    "bun-plugin-dts": "^0.3.0",
+    "colors": "^1.4.0",
     "eslint": "^9.17.0",
     "eslint-plugin-jest": "^28.10.0",
     "globals": "^15.14.0",
@@ -32,5 +20,22 @@
   },
   "peerDependencies": {
     "typescript": "^5.7.2"
-  }
+  },
+  "scripts": {
+    "start": "bun app.ts",
+    "start:dev": "bun --hot app.ts",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "prepare": "husky",
+    "test": "jest",
+    "build:prod": "bun build.ts",
+    "build:browser": "bun build ./src/index.ts --outdir ./dist --target browser --sourcemap",
+    "build:bun": "bun build ./src/index.ts --outdir ./dist --target bun --sourcemap",
+    "build:node": "bun build ./src/index.ts --outdir ./dist --target node --sourcemap",
+    "compile:app": "bun build ./app.ts --compile --outfile ./dist/app",
+    "compile:app:minify": "bun build ./app.ts --compile --minify --outfile ./dist/app",
+    "clear": "rm -rf ./dist"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts"
 }
