@@ -1,6 +1,6 @@
 {
   "name": "@jdic/dijkstra",
-  "version": "22.12.2024-t1",
+  "version": "22.12.2024-t2",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "devDependencies": {
