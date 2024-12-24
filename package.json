@@ -1,7 +1,7 @@
 {
-  "name": "dijkstra",
+  "name": "@jdic/dijkstra",
   "module": "app.ts",
-  "version": "22-12-2024",
+  "version": "22.12.2024",
   "type": "module",
   "scripts": {
     "start": "bun app.ts",
